@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/index.css">
+    <title>Node Postgres Blog Registration</title>
+</head>
+
+<body>
+    <div class="container">
+        <%- include('header', { url: url, user: user }); %>
+        <h2>Registration</h2>
+
+        <% if (message) { %>
+        <div id="alert" class="alert alert-<%= messageType %>" role="alert">
+            <%= message %>
+        </div>
+        <% } %>
+
+        <form action="/register" method="post">
+            <div class="form-group">
+                <label for="first-name">First name</label>
+                <input required type="text" name="firstName" class="form-control" placeholder="First name">
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last name</label>
+                <input required type="text" name="lastName" class="form-control" placeholder="Last name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input required type="email" name="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input required type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+</body>
+
+</html>

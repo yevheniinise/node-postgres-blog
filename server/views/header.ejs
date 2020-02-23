@@ -1,0 +1,17 @@
+<header class="header">
+    <a href="/">Home</a>
+    <% if (user) { %>
+    <div>
+        <span>
+            <%= user.first_name + ' ' + user.last_name %>
+        </span>
+        <a href="/new-article">New Article</a>
+        <a href="/logout">Logout</a>
+    </div>
+   <% } else { %>
+    <div>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+    </div>
+    <% } %>
+</header>

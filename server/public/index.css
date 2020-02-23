@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.header > div > a {
+  padding-left: 1rem;
+}
+
+.article-card {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid gray;
+}
+
+.article-card:last-child {
+  margin-bottom: 1rem;
+}
+
+article > header {
+  margin-bottom: 1rem;
+}
+span {
+  color: grey;
+}
